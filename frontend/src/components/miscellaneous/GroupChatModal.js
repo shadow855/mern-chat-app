@@ -12,6 +12,7 @@ import {
   Input,
   useToast,
   Box,
+  Spinner,
 } from "@chakra-ui/react";
 import axios from "axios";
 import { useState } from "react";
@@ -167,7 +168,7 @@ const GroupChatModal = ({ children }) => {
             </Box>
             {loading ? (
               // <ChatLoading />
-              <div>Loading...</div>
+              <div><Spinner /></div>
             ) : (
               searchResult
                 ?.slice(0, 4)
